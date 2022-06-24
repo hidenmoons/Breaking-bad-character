@@ -1,6 +1,13 @@
 <p>character works!</p>
 <div class="container my-5">
     <h1>Breaking bad</h1>
+    <button (click)="getcharacter()">characters</button>
     <hr/>
     <input type="text" class="form-control" placeholder="walter white...." (input)="filter($event)">
+
+    <div class="wrapper">
+        <div *ngFor="let personake of personajes">
+
+        </div>
+    </div>
 </div>
