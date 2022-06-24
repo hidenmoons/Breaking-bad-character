@@ -34,7 +34,7 @@ export class CharacterComponent {
           ocuppation: ocuppation
         };
       })
-      console.table(data)
+      console.table(this.personajes)
     })
 
   }
