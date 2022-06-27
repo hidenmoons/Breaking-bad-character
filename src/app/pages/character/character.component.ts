@@ -10,14 +10,8 @@ import { Personaje } from 'src/app/interface/Personaje';
 export class CharacterComponent {
 
   personajes: Personaje[]|undefined
-
+  filtropersonaje: Personaje[]|undefined
   constructor(private character:CharacterService) { }
-
-  filter(e:any)
-  {
-    const search:string = e.target.value;
-    console.log({search})
-  }
 
   getcharacter(){
 
@@ -34,9 +28,17 @@ export class CharacterComponent {
           ocuppation: ocuppation
         };
       })
+      this.filtropersonaje= this.personajes
       console.table(this.personajes)
     })
 
   }
-
+  filter(e:any)
+  {
+    const search:string = e.target.value;
+    this.personajes = this.filtropersonaje?.filter(({name}:Personaje)=>{
+      return name.toLocaleLowerCase().includes(search.toLowerCase());
+    })
+    console.log({search})
+  }
 }
