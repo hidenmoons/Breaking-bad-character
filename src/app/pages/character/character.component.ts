@@ -7,11 +7,15 @@ import { Personaje } from 'src/app/interface/Personaje';
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss']
 })
-export class CharacterComponent {
+export class CharacterComponent implements OnInit {
 
   personajes: Personaje[]|undefined
   filtropersonaje: Personaje[]|undefined
   constructor(private character:CharacterService) { }
+
+  ngOnInit() {
+   this.getcharacter()
+  }
 
   getcharacter(){
 

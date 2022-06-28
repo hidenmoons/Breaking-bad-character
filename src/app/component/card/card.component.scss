@@ -1,5 +1,16 @@
-.example-card {
-    max-width: 800px;
-    max-height: 800px;
-    margin-bottom: 8px;
-  }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 30px;
+}
+
+.card {
+    display: flow-root;
+    grid-template-rows: max-content 10px 50fr;
+}
+
+.card_img {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+}
