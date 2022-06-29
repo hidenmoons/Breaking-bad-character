@@ -1,7 +1,6 @@
 <div>
 <mat-card class="card">
     <mat-card-header>
-        <button mat-button color="warn">Accent</button>
 
       <div mat-card-avatar class="cards"></div>
     
@@ -14,13 +13,14 @@
       <p>
         {{personaje.ocuppation}}
       </p>
-      <div>
-        <span *ngIf="!personaje.status.toLowerCase().includes('alive')">
-
-            <button color="warn">{{personaje.status}}</button>
-            
+      <div *ngIf="!personaje.status.toLowerCase().includes('alive'); else elseBlock">
+        <span >
+            <button mat-raised-button color="warn">{{personaje.status}}</button>
         </span>
       </div>
+      <ng-template #elseBlock>
+        <button mat-raised-button color="primary">{{personaje.status}}</button>
+      </ng-template>
     </mat-card-content>
   </mat-card>
 </div>

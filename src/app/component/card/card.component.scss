@@ -1,16 +1,9 @@
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 30px;
-}
-
-.card {
-    display: flow-root;
-    grid-template-rows: max-content 10px 50fr;
-}
-
 .card_img {
-    object-fit: cover;
-    width: 50%;
-    height: 50%;
-}
+
+  height: 650px;
+  
+  width: 550px;
+  
+  object-fit: cover;
+  
+  }
