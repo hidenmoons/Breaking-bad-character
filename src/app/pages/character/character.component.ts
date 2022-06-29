@@ -37,7 +37,7 @@ export class CharacterComponent implements OnInit {
     })
 
   }
-  
+
   filter(e:any)
   {
     const search:string = e.target.value;

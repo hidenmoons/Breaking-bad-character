@@ -1,13 +1,13 @@
-<div >
-    <h1>Breaking bad</h1> 
-    <hr/>
+<div>
+    <h1>Buscador de personajes Breaking bad</h1>
+    <hr />
     <input type="text" class="form-control" placeholder="walter white...." (input)="filter($event)">
-
+   
+    <div class="box">
     <div class="wrapper">
         <div *ngFor="let personaje of personajes">
             <app-card [personaje]="personaje"></app-card>
         </div>
     </div>
-
-
+        </div>
 </div>
