@@ -22,14 +22,14 @@ export class CharacterComponent implements OnInit {
     this.character.getCharacter().
     subscribe((data)=>{
     
-      this.personajes =  data.map(({char_id,name , nickname , img,status,ocuppation}:Personaje)=>{
+      this.personajes =  data.map(({char_id,name , nickname , img,status,occupation}:Personaje)=>{
         return{
           char_id: char_id,
           name: name,
           nickname: nickname,
           img: img,
           status: status,
-          ocuppation: ocuppation
+          occupation: occupation
         };
       })
       this.filtropersonaje= this.personajes

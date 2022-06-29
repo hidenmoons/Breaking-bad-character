@@ -4,9 +4,9 @@ name:string,
 nickname:string,
 img:string,
 status:string,
-ocuppation: Ocuppation[];
+occupation: occupation[];
 }
 
-export interface Ocuppation{
+export interface occupation{
     name:string;
 }

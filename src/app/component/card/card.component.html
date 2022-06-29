@@ -7,8 +7,8 @@
     <mat-card-content>
       <mat-card-subtitle>{{personaje.nickname}}</mat-card-subtitle>
       <mat-card-title>{{personaje.name}}</mat-card-title>
-      <p *ngFor="let i of personaje.ocuppation">
-        {{i}}
+      <p *ngFor="let i of personaje.occupation">
+       <strong>&bull;{{i}}</strong> 
       </p>
       <div *ngIf="!personaje.status.toLowerCase().includes('alive'); else elseBlock">
         <span>
